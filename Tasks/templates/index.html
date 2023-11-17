@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Task1</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="name" value=""> <br> 
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+    <br>
+
+    {{ ad }}
+
+    <hr>
+
+<h2>Task2</h2>
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        <input {% if vezife == 'Vekil' %} checked {% endif %} type="radio" name="Vezife" value="Vekil"> Vekil <br>
+        <input {% if vezife == 'Hekim' %} checked {% endif %} type="radio" name="Vezife" value="Hekim"> Hekim <br>
+        <input {% if vezife == 'Polis' %} checked {% endif %} type="radio" name="Vezife" value="Polis"> Polis <br>
+        <br>
+
+        <button type="submit">Submit</button>
+
+        <br>
+
+        Sizin vezifeniz {{ vezife }}dir
+
+    </form>
+
+    <hr>
+
+    <h2>Task3</h2>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="b"> <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {{ soz }}
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="a2"> <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {{ cumle }}
+</body>
+</html>
